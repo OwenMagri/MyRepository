@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Level2GoalPost2 : MonoBehaviour {
+public class Level3GoalPost2 : MonoBehaviour {
 
     public static int score1 = 0;
     public Text PlayerScore;
@@ -12,22 +12,21 @@ public class Level2GoalPost2 : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        maxHits = 10;
+        maxHits = 15;
         PlayerScore.text = "0";
     }
-
-    // Update is called once per frame
-    void Update()
-    {
+	
+	// Update is called once per frame
+	void Update () {
         if (score1 >= maxHits)
         {
-            SceneManager.LoadScene("Level_3");
+            SceneManager.LoadScene("End_Scene");
         }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        score1 = score1 + 2;
+        score1 = score1 + 3;
         PlayerScore.text = "" + score1;
 
     }

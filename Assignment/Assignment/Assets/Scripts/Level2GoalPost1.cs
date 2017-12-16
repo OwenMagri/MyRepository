@@ -12,7 +12,7 @@ public class Level2GoalPost1 : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        maxHits = 5;
+        maxHits = 10;
         PlayerScore.text = "0";
     }
 
@@ -27,7 +27,7 @@ public class Level2GoalPost1 : MonoBehaviour {
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        score2++;
+        score2 = score2 + 2;
         PlayerScore.text = "" + score2;
 
     }
